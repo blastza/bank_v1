@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: investments
+  datasource:
+    url: jdbc:postgresql://localhost:5432/investments_db
+    username: ldamuleli
+    password: Lodav72#
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  security:
+    filter:
+      order: 10
+
+springdoc:
+  api-docs:
+    path: /api-docs
+
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+
+jwt:
+  secret : cDJ3DacmMbxoQnVUyS15IYBCyJxSgKcdqtjDn5AKP0Av3dS7ZAivAzsfijxF88R8sbAR/i6pssz7zvcF4E8+dw==
+
