@@ -1,1 +1,10 @@
-/Users/admin/Desktop/Workspace/investment/src/main/java/com/platform/investment/InvestmentApplication.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/repository/InvestorRepository.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/investor/model/ProductType.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/api/DemoController.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/config/ApplicationConfig.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/config/OpenApiConfig.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/api/ManagementController.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/investor/model/Product.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/domain/Investor.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/BankV1Application.java
+/Users/admin/Desktop/Workspace/bank_v1/src/main/java/com/platform/bank_v1/api/InvestorController.java

@@ -1,1 +1,11 @@
-com/platform/investment/InvestmentApplication.class
+com/platform/bank_v1/repository/InvestorRepository.class
+com/platform/bank_v1/api/ManagementController.class
+com/platform/bank_v1/api/InvestorController.class
+com/platform/bank_v1/domain/Investor$InvestorBuilder.class
+com/platform/bank_v1/investor/model/Product.class
+com/platform/bank_v1/BankV1Application.class
+com/platform/bank_v1/investor/model/ProductType.class
+com/platform/bank_v1/config/OpenApiConfig.class
+com/platform/bank_v1/domain/Investor.class
+com/platform/bank_v1/config/ApplicationConfig.class
+com/platform/bank_v1/api/DemoController.class
