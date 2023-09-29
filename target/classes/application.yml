@@ -11,23 +11,13 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
-      temp:
-        use_jdbc_metadata_defaults: false
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-  flyway:
-    baselineOnMigrate: true
-    schema: public
-    enabled: true
-    user: ldamuleli
-    password: Lodav72#
-    baseline-description: "init"
-    baseline-version: 1
 
 application:
   security:
