@@ -2,44 +2,52 @@ package com.platform.bank_v1.domain;
 
 
 import jakarta.persistence.*;
+
 import java.sql.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Table(name = "investors")
+@Table(name = "investor")
 public class Investor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer investor_id;
     private String firstname;
     private String lastname;
-    private Date birth_date;
+    private LocalDate birth_date;
     private String phone;
     private String email;
-    private String address;
-    private String city;
-    private String state;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "address_id")
+    private Address address;
+    @OneToMany(targetEntity = Product.class,
+            cascade = CascadeType.ALL)
+    @JoinColumn(name= "ip_fk", referencedColumnName = "investor_id")
+    private List<Product> products;
 
     public Investor() {
     }
 
-    public Investor(Integer id, String firstname, String lastname, Date birth_date, String phone, String email, String address, String city, String state) {
-        this.investor_id = id;
+    public Investor(Integer investor_id, String firstname, String lastname, LocalDate birth_date, String phone, String email, Address address, List<Product> products) {
+        this.investor_id = investor_id;
         this.firstname = firstname;
         this.lastname = lastname;
         this.birth_date = birth_date;
         this.phone = phone;
         this.email = email;
         this.address = address;
-        this.city = city;
-        this.state = state;
+        this.products = products;
+
     }
 
-    public Integer getId() {
+    public Integer getInvestor_id() {
         return investor_id;
     }
 
-    public void setId(Integer id) {
-        this.investor_id = id;
+    public void setInvestor_id(Integer investor_id) {
+        this.investor_id = investor_id;
     }
 
     public String getFirstname() {
@@ -58,11 +66,11 @@ public class Investor {
         this.lastname = lastname;
     }
 
-    public Date getBirth_date() {
+    public LocalDate getBirth_date() {
         return birth_date;
     }
 
-    public void setBirth_date(Date birth_date) {
+    public void setBirth_date(LocalDate birth_date) {
         this.birth_date = birth_date;
     }
 
@@ -82,42 +90,19 @@ public class Investor {
         this.email = email;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public String getCity() {
-        return city;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    @Override
-    public String toString() {
-        return "Investor{" +
-                "id=" + investor_id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                ", birth_date=" + birth_date +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                '}';
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

@@ -10,8 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @RequiredArgsConstructor
 public class BankV1Application {
 
-	//private final InvestorRepository investorRepository;
-
 	public static void main(String[] args) {
 		SpringApplication.run(BankV1Application.class, args);
 	}
